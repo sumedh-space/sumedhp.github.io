@@ -17,16 +17,14 @@ html{scroll-behavior:smooth}
 body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--navy);color:var(--text);line-height:1.6;font-size:15px}
 a{color:var(--accent2);text-decoration:none}
 
-/* NAV */
 nav{position:sticky;top:0;z-index:99;background:rgba(15,23,42,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:14px 40px;display:flex;justify-content:space-between;align-items:center}
 .nav-name{font-weight:700;font-size:15px;color:#fff;letter-spacing:0.03em}
-.nav-links{display:flex;gap:28px}
+.nav-links{display:flex;gap:28px;align-items:center}
 .nav-links a{font-size:13px;color:var(--muted);transition:color .2s;font-weight:500}
 .nav-links a:hover{color:#fff}
-.nav-cta{background:var(--accent);color:#fff;padding:7px 16px;border-radius:7px;font-size:13px;font-weight:600;transition:background .2s}
-.nav-cta:hover{background:#4f46e5;color:#fff}
+.nav-cta{background:var(--accent);color:#fff!important;padding:7px 18px;border-radius:7px;font-size:13px;font-weight:600;transition:background .2s}
+.nav-cta:hover{background:#4f46e5}
 
-/* HERO */
 .hero{padding:100px 40px 80px;max-width:900px;margin:0 auto}
 .status-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2);color:#4ade80;font-size:12px;padding:5px 14px;border-radius:99px;margin-bottom:22px;font-weight:600}
 .pulse{width:7px;height:7px;border-radius:50%;background:#4ade80;animation:pulse 2s infinite}
@@ -42,82 +40,104 @@ h1 .accent{color:var(--accent2)}
 .btn-outline{background:transparent;color:var(--text);border:1px solid var(--border)}
 .btn-outline:hover{border-color:var(--accent2);color:var(--accent2);transform:translateY(-1px)}
 
-/* SECTIONS */
 .section{padding:70px 40px;max-width:900px;margin:0 auto}
 .sec-label{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent2);font-weight:700;margin-bottom:8px}
 h2{font-size:28px;font-weight:700;color:#fff;margin-bottom:32px}
 .divider{height:1px;background:var(--border);max-width:900px;margin:0 auto}
 
-/* SKILLS */
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
-.skill-card{background:var(--card);border:1px solid var(--border);border-radius:11px;padding:18px 20px;transition:border-color .2s,transform .2s}
-.skill-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.skill-card{background:var(--card);border:1px solid var(--border);border-radius:11px;padding:18px 20px;transition:all .25s}
+.skill-card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 32px rgba(99,102,241,0.15)}
 .skill-tag{font-size:11px;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:.07em;margin-bottom:7px}
 .skill-title{font-size:14px;font-weight:700;color:#fff;margin-bottom:5px}
 .skill-desc{font-size:12px;color:var(--muted);line-height:1.5}
 
-/* CERTS */
-.certs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
-.cert-card{background:var(--card2);border:1px solid var(--border);border-radius:11px;padding:18px 20px;display:flex;align-items:flex-start;gap:12px}
-.cert-icon{width:36px;height:36px;border-radius:8px;background:rgba(99,102,241,.15);border:1px solid rgba(99,102,241,.25);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
-.cert-name{font-size:13px;font-weight:700;color:#fff;margin-bottom:4px;line-height:1.3}
-.cert-issuer{font-size:11px;color:var(--muted)}
-
-/* EXPERIENCE */
-.timeline{display:flex;flex-direction:column;gap:0}
+.timeline{display:flex;flex-direction:column}
 .tl-item{display:flex;gap:22px;padding-bottom:36px}
 .tl-left{display:flex;flex-direction:column;align-items:center;flex-shrink:0}
 .tl-dot{width:11px;height:11px;border-radius:50%;background:var(--accent);margin-top:5px;flex-shrink:0;box-shadow:0 0 0 3px rgba(99,102,241,.2)}
 .tl-track{flex:1;width:1px;background:var(--border);margin-top:7px}
-.tl-date{font-size:11px;color:var(--muted2);font-weight:700;min-width:80px;padding-top:4px;line-height:1.4}
-.tl-body{}
+.tl-date{font-size:11px;color:var(--muted2);font-weight:700;min-width:86px;padding-top:4px;line-height:1.4}
 .tl-role{font-size:16px;font-weight:700;color:#fff;margin-bottom:2px}
 .tl-company{font-size:13px;color:var(--accent2);margin-bottom:2px;font-weight:600}
 .tl-loc{font-size:12px;color:var(--muted2);margin-bottom:8px}
 .tl-desc{font-size:13px;color:var(--muted);line-height:1.6}
 .tl-desc li{margin-left:16px;margin-bottom:3px}
 
-/* EDUCATION */
+.certs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.cert-card{background:var(--card2);border:1px solid var(--border);border-radius:11px;padding:18px 20px;display:flex;align-items:flex-start;gap:12px;transition:all .25s}
+.cert-card:hover{border-color:var(--accent2);transform:translateY(-2px);box-shadow:0 4px 20px rgba(99,102,241,0.12)}
+.cert-icon{width:36px;height:36px;border-radius:8px;background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.2);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.cert-name{font-size:13px;font-weight:700;color:#fff;margin-bottom:4px;line-height:1.3}
+.cert-issuer{font-size:11px;color:var(--muted)}
+
 .edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
-.edu-card{background:var(--card);border:1px solid var(--border);border-radius:11px;padding:22px 24px}
-.edu-degree{font-size:15px;font-weight:700;color:#fff;margin-bottom:4px}
+.edu-card{background:var(--card);border:1px solid var(--border);border-radius:11px;padding:24px;transition:all .25s}
+.edu-card:hover{border-color:var(--accent2);transform:translateY(-2px)}
+.edu-degree{font-size:15px;font-weight:700;color:#fff;margin-bottom:5px}
 .edu-school{font-size:14px;color:var(--accent2);font-weight:600;margin-bottom:3px}
-.edu-spec{font-size:12px;color:var(--muted);margin-bottom:6px}
+.edu-spec{font-size:12px;color:var(--muted);margin-bottom:8px}
 .edu-year{font-size:11px;color:var(--muted2);font-weight:700;text-transform:uppercase;letter-spacing:.06em}
 
-/* RESEARCH */
 .research-grid{display:grid;gap:14px}
-.research-card{background:var(--card);border:1px solid var(--border);border-radius:11px;padding:20px 24px;display:flex;gap:18px;align-items:flex-start}
-.research-num{font-size:28px;font-weight:800;color:rgba(99,102,241,.25);line-height:1;flex-shrink:0;min-width:32px}
+.research-card{background:var(--card);border:1px solid var(--border);border-radius:11px;padding:22px 26px;display:flex;gap:20px;align-items:flex-start;transition:all .25s}
+.research-card:hover{border-color:var(--accent);box-shadow:0 4px 20px rgba(99,102,241,0.12)}
+.research-num{font-size:28px;font-weight:800;color:rgba(99,102,241,.2);line-height:1;flex-shrink:0;min-width:32px}
 .research-title{font-size:15px;font-weight:700;color:#fff;margin-bottom:5px}
-.research-desc{font-size:13px;color:var(--muted);line-height:1.6}
+.research-desc{font-size:13px;color:var(--muted);line-height:1.65}
+.research-desc em{color:var(--accent2);font-style:italic}
 
-/* AWARD */
-.award-card{background:linear-gradient(135deg,rgba(99,102,241,.08),rgba(168,85,247,.06));border:1px solid rgba(99,102,241,.25);border-radius:14px;padding:28px 32px;display:flex;gap:20px;align-items:flex-start}
-.award-trophy{font-size:36px;flex-shrink:0}
-.award-title{font-size:18px;font-weight:700;color:#fff;margin-bottom:6px}
-.award-desc{font-size:14px;color:var(--muted);line-height:1.6}
+.award-card{background:var(--card2);border:1px solid rgba(99,102,241,.25);border-radius:12px;padding:32px;display:flex;gap:24px;align-items:flex-start;box-shadow:inset 0 0 60px rgba(99,102,241,.04)}
+.award-trophy{font-size:40px;flex-shrink:0}
+.award-title{font-size:18px;font-weight:700;color:#fff;margin-bottom:8px}
+.award-desc{font-size:14px;color:var(--muted);line-height:1.65}
 
-/* CONTACT */
-.contact-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:48px;text-align:center}
-.contact-card h2{margin-bottom:10px}
-.contact-sub{color:var(--muted);font-size:15px;margin-bottom:32px}
-.contact-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
-.contact-link{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:9px;font-size:14px;font-weight:600;border:1px solid var(--border);color:var(--text);transition:all .2s}
-.contact-link:hover{border-color:var(--accent2);color:var(--accent2);transform:translateY(-1px)}
-.contact-info{display:flex;gap:24px;justify-content:center;flex-wrap:wrap}
-.contact-info-item{font-size:13px;color:var(--muted)}
-.contact-info-item span{color:var(--text);font-weight:600}
+/* CONTACT FORM */
+.contact-wrapper{display:grid;grid-template-columns:1fr 1.6fr;gap:32px;align-items:start}
+.contact-info-block{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:32px}
+.contact-info-title{font-size:18px;font-weight:700;color:#fff;margin-bottom:8px}
+.contact-info-sub{font-size:14px;color:var(--muted);margin-bottom:28px;line-height:1.65}
+.contact-detail{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.contact-detail-icon{width:36px;height:36px;border-radius:8px;background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.2);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.contact-detail-label{font-size:11px;color:var(--muted2);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px}
+.contact-detail-value{font-size:13px;color:var(--text);font-weight:600}
+.contact-detail-value a{color:var(--accent2)}
+.contact-divider{height:1px;background:var(--border);margin:20px 0}
+.social-row{display:flex;gap:10px;margin-top:4px}
+.social-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;font-size:12px;font-weight:600;border:1px solid var(--border);color:var(--muted);transition:all .2s}
+.social-btn:hover{border-color:var(--accent2);color:var(--accent2)}
+
+.form-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:32px}
+.form-title{font-size:18px;font-weight:700;color:#fff;margin-bottom:6px}
+.form-sub{font-size:13px;color:var(--muted);margin-bottom:24px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.form-group label{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.form-group input,.form-group textarea,.form-group select{background:var(--navy2);border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--text);font-family:inherit;transition:border-color .2s;outline:none;width:100%}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--accent2)}
+.form-group textarea{resize:vertical;min-height:110px}
+.form-group select option{background:var(--navy2)}
+.submit-btn{width:100%;padding:13px;background:var(--accent);color:#fff;border:none;border-radius:9px;font-size:15px;font-weight:700;cursor:pointer;transition:all .2s;font-family:inherit;letter-spacing:0.02em}
+.submit-btn:hover{background:#4f46e5;transform:translateY(-1px)}
+.submit-btn:disabled{opacity:0.6;cursor:not-allowed;transform:none}
+.form-notice{font-size:11px;color:var(--muted2);text-align:center;margin-top:10px}
+.form-notice a{color:var(--accent2)}
+
+/* Success / Error states */
+.msg-box{display:none;padding:14px 18px;border-radius:9px;font-size:14px;font-weight:600;margin-bottom:16px;text-align:center}
+.msg-success{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.25);color:#4ade80}
+.msg-error{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.25);color:#f87171}
 
 footer{text-align:center;padding:32px;font-size:12px;color:var(--muted2);border-top:1px solid var(--border)}
 
-@media(max-width:640px){
+@media(max-width:720px){
   nav{padding:12px 20px}
-  .nav-links{gap:16px}
+  .nav-links{gap:14px}
   .hero{padding:70px 20px 60px}
   h1{font-size:36px}
   .section{padding:50px 20px}
-  .contact-card{padding:28px 20px}
+  .contact-wrapper{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
   .award-card{flex-direction:column}
   .research-card{flex-direction:column;gap:8px}
 }
@@ -141,7 +161,7 @@ footer{text-align:center;padding:32px;font-size:12px;color:var(--muted2);border-
   <div class="status-badge"><span class="pulse"></span> Open to opportunities</div>
   <div class="hero-eyebrow">Product Security Engineer</div>
   <h1>Securing cloud<br><span class="accent">ecosystems.</span></h1>
-  <p class="hero-sub">Currently at Conga, I fortify cloud infrastructure and product security — from threat modelling and DevSecOps to automated patch management and application hardening.</p>
+  <p class="hero-sub">Currently at Conga — fortifying cloud infrastructure, integrating DevSecOps, and staying ahead of threats before they become incidents.</p>
   <div class="btn-row">
     <a class="btn btn-primary" href="#experience">My journey</a>
     <a class="btn btn-outline" href="#contact">Get in touch</a>
@@ -155,36 +175,12 @@ footer{text-align:center;padding:32px;font-size:12px;color:var(--muted2);border-
   <div class="sec-label">What I do</div>
   <h2>Core expertise</h2>
   <div class="skills-grid">
-    <div class="skill-card">
-      <div class="skill-tag">Threat Intel</div>
-      <div class="skill-title">Threat Modelling</div>
-      <div class="skill-desc">Identifying and mitigating security risks through comprehensive threat analysis and risk assessment frameworks.</div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-tag">Cloud</div>
-      <div class="skill-title">Infrastructure Security</div>
-      <div class="skill-desc">Securing cloud infrastructure with automated patch management and vulnerability assessment protocols.</div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-tag">AppSec</div>
-      <div class="skill-title">Application Security</div>
-      <div class="skill-desc">Implementing DevSecOps methodologies to ensure secure SDLC and application hardening.</div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-tag">DevSecOps</div>
-      <div class="skill-title">DevSecOps Integration</div>
-      <div class="skill-desc">Embedding security into CI/CD pipelines, secrets scanning, and supply chain security.</div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-tag">Detection</div>
-      <div class="skill-title">Proactive Threat Detection</div>
-      <div class="skill-desc">SIEM, log analysis with Splunk, and real-time security event monitoring.</div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-tag">OSINT</div>
-      <div class="skill-title">Threat Intelligence</div>
-      <div class="skill-desc">Open source intelligence gathering and advanced threat research methodologies.</div>
-    </div>
+    <div class="skill-card"><div class="skill-tag">Threat Intel</div><div class="skill-title">Threat Modelling</div><div class="skill-desc">Identifying and mitigating security risks through comprehensive threat analysis and risk assessment frameworks.</div></div>
+    <div class="skill-card"><div class="skill-tag">Cloud</div><div class="skill-title">Infrastructure Security</div><div class="skill-desc">Securing cloud infrastructure with automated patch management and vulnerability assessment protocols.</div></div>
+    <div class="skill-card"><div class="skill-tag">AppSec</div><div class="skill-title">Application Security</div><div class="skill-desc">Implementing DevSecOps methodologies to ensure secure SDLC and application hardening.</div></div>
+    <div class="skill-card"><div class="skill-tag">DevSecOps</div><div class="skill-title">DevSecOps Integration</div><div class="skill-desc">Embedding security into CI/CD pipelines, secrets scanning, and supply chain security.</div></div>
+    <div class="skill-card"><div class="skill-tag">Detection</div><div class="skill-title">Threat Detection</div><div class="skill-desc">SIEM, Splunk log analysis, and real-time security event monitoring and response.</div></div>
+    <div class="skill-card"><div class="skill-tag">OSINT</div><div class="skill-title">Threat Intelligence</div><div class="skill-desc">Open source intelligence gathering and advanced threat research methodologies.</div></div>
   </div>
 </section>
 
@@ -195,69 +191,61 @@ footer{text-align:center;padding:32px;font-size:12px;color:var(--muted2);border-
   <div class="sec-label">Background</div>
   <h2>Professional journey</h2>
   <div class="timeline">
-
     <div class="tl-item">
-      <div style="min-width:90px;font-size:11px;color:#64748b;font-weight:700;padding-top:4px;line-height:1.5">May 2024<br>Present</div>
+      <div class="tl-date">May 2024<br>Present</div>
       <div class="tl-left"><div class="tl-dot"></div><div class="tl-track"></div></div>
-      <div class="tl-body">
+      <div>
         <div class="tl-role">Product Security Engineer</div>
         <div class="tl-company">Conga</div>
         <div class="tl-loc">Pune, Maharashtra</div>
-        <div class="tl-desc">
-          <ul>
-            <li>Fortifying cloud ecosystems and product application security</li>
-            <li>Managing infrastructure vulnerabilities at scale</li>
-            <li>Integrating DevSecOps methodologies across engineering teams</li>
-            <li>Proactive threat detection and automated patch management</li>
-          </ul>
-        </div>
+        <div class="tl-desc"><ul>
+          <li>Fortifying cloud ecosystems and product application security</li>
+          <li>Managing infrastructure vulnerabilities at scale</li>
+          <li>Integrating DevSecOps methodologies across engineering teams</li>
+          <li>Proactive threat detection and automated patch management</li>
+        </ul></div>
       </div>
     </div>
-
     <div class="tl-item">
-      <div style="min-width:90px;font-size:11px;color:#64748b;font-weight:700;padding-top:4px;line-height:1.5">Jan 2022<br>Apr 2024</div>
+      <div class="tl-date">Jan 2022<br>Apr 2024</div>
       <div class="tl-left"><div class="tl-dot"></div><div class="tl-track"></div></div>
-      <div class="tl-body">
+      <div>
         <div class="tl-role">Cloud Engineer</div>
         <div class="tl-company">CloudThat</div>
         <div class="tl-loc">Bengaluru, Karnataka · 2 yrs 4 mos</div>
         <div class="tl-desc">Developed cloud infrastructure solutions and security implementations across client engagements.</div>
       </div>
     </div>
-
     <div class="tl-item">
-      <div style="min-width:90px;font-size:11px;color:#64748b;font-weight:700;padding-top:4px;line-height:1.5">Jan 2022<br>Jun 2022</div>
+      <div class="tl-date">Jan 2022<br>Jun 2022</div>
       <div class="tl-left"><div class="tl-dot"></div><div class="tl-track"></div></div>
-      <div class="tl-body">
+      <div>
         <div class="tl-role">Research Intern</div>
         <div class="tl-company">CloudThat</div>
         <div class="tl-loc">Bengaluru, Karnataka · 6 mos</div>
         <div class="tl-desc">Conducted research on cloud security technologies and emerging threats.</div>
       </div>
     </div>
-
     <div class="tl-item">
-      <div style="min-width:90px;font-size:11px;color:#64748b;font-weight:700;padding-top:4px;line-height:1.5">Oct 2021<br>Mar 2022</div>
+      <div class="tl-date">Oct 2021<br>Mar 2022</div>
       <div class="tl-left"><div class="tl-dot"></div><div class="tl-track"></div></div>
-      <div class="tl-body">
+      <div>
         <div class="tl-role">Cybersecurity Instructor</div>
         <div class="tl-company">IMS Proschool</div>
         <div class="tl-loc">Mumbai, Maharashtra · 6 mos</div>
         <div class="tl-desc">Taught cybersecurity fundamentals and practical security implementations to students.</div>
       </div>
     </div>
-
     <div class="tl-item">
-      <div style="min-width:90px;font-size:11px;color:#64748b;font-weight:700;padding-top:4px;line-height:1.5">Nov 2021<br>Dec 2021</div>
+      <div class="tl-date">Nov 2021<br>Dec 2021</div>
       <div class="tl-left"><div class="tl-dot"></div></div>
-      <div class="tl-body">
+      <div>
         <div class="tl-role">Cybersecurity Researcher</div>
         <div class="tl-company">Virtually Testing Foundation</div>
         <div class="tl-loc">California, United States · 2 mos</div>
         <div class="tl-desc">Researched advanced cybersecurity methodologies and threat intelligence.</div>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -285,39 +273,15 @@ footer{text-align:center;padding:32px;font-size:12px;color:var(--muted2);border-
 
 <div class="divider"></div>
 
-<!-- CERTIFICATIONS -->
+<!-- CERTS -->
 <section class="section" id="certs">
   <div class="sec-label">Credentials</div>
   <h2>Certifications</h2>
   <div class="certs-grid">
-    <div class="cert-card">
-      <div class="cert-icon">☁️</div>
-      <div>
-        <div class="cert-name">AWS Certified Solutions Architect</div>
-        <div class="cert-issuer">Amazon Web Services</div>
-      </div>
-    </div>
-    <div class="cert-card">
-      <div class="cert-icon">🔐</div>
-      <div>
-        <div class="cert-name">Certified Cloud Security Engineer</div>
-        <div class="cert-issuer">EC-Council</div>
-      </div>
-    </div>
-    <div class="cert-card">
-      <div class="cert-icon">🛡️</div>
-      <div>
-        <div class="cert-name">Security, Compliance & Identity Fundamentals</div>
-        <div class="cert-issuer">Microsoft</div>
-      </div>
-    </div>
-    <div class="cert-card">
-      <div class="cert-icon">🔍</div>
-      <div>
-        <div class="cert-name">OSINTCon 2025</div>
-        <div class="cert-issuer">Threat Intelligence · 2025</div>
-      </div>
-    </div>
+    <div class="cert-card"><div class="cert-icon">☁️</div><div><div class="cert-name">AWS Certified Solutions Architect</div><div class="cert-issuer">Amazon Web Services</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🔐</div><div><div class="cert-name">Certified Cloud Security Engineer</div><div class="cert-issuer">EC-Council</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🛡️</div><div><div class="cert-name">Security, Compliance & Identity Fundamentals</div><div class="cert-issuer">Microsoft</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🔍</div><div><div class="cert-name">OSINTCon 2025</div><div class="cert-issuer">Threat Intelligence · 2025</div></div></div>
   </div>
 </section>
 
@@ -364,22 +328,142 @@ footer{text-align:center;padding:32px;font-size:12px;color:var(--muted2);border-
 
 <!-- CONTACT -->
 <section class="section" id="contact">
-  <div class="contact-card">
-    <div class="sec-label" style="margin-bottom:8px">Get in touch</div>
-    <h2>Let's work together</h2>
-    <p class="contact-sub">Open to full-time roles, consulting, and security research collaborations.</p>
-    <div class="contact-links">
-      <a class="contact-link" href="mailto:sumedhpatil6342@gmail.com">✉ Email me</a>
-      <a class="contact-link" href="https://www.linkedin.com/in/sumedhp" target="_blank">in LinkedIn</a>
+  <div class="sec-label">Get in touch</div>
+  <h2>Let's work together</h2>
+
+  <div class="contact-wrapper">
+
+    <!-- Left: info -->
+    <div class="contact-info-block">
+      <div class="contact-info-title">Contact Info</div>
+      <div class="contact-info-sub">Open to full-time roles, consulting, and security research collaborations.</div>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">✉️</div>
+        <div>
+          <div class="contact-detail-label">Email</div>
+          <div class="contact-detail-value"><a href="mailto:sumedhpatil6342@gmail.com">sumedhpatil6342@gmail.com</a></div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📍</div>
+        <div>
+          <div class="contact-detail-label">Location</div>
+          <div class="contact-detail-value">Pune, Maharashtra</div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">💼</div>
+        <div>
+          <div class="contact-detail-label">Current Role</div>
+          <div class="contact-detail-value">Product Security Engineer @ Conga</div>
+        </div>
+      </div>
+
+      <div class="contact-divider"></div>
+
+      <div class="contact-detail-label" style="margin-bottom:10px">Find me on</div>
+      <div class="social-row">
+        <a class="social-btn" href="https://www.linkedin.com/in/sumedhp" target="_blank">in LinkedIn</a>
+      </div>
     </div>
-    <div class="contact-info">
-      <div class="contact-info-item">📍 <span>Pune, Maharashtra</span></div>
-      <div class="contact-info-item">🌐 <span>English (Full Professional)</span></div>
+
+    <!-- Right: form -->
+    <div class="form-card">
+      <div class="form-title">Send a message</div>
+      <div class="form-sub">Fill in the form and I'll get back to you within 24 hours.</div>
+
+      <div class="msg-box msg-success" id="successMsg">✅ Message sent! I'll get back to you soon.</div>
+      <div class="msg-box msg-error" id="errorMsg">❌ Something went wrong. Please try again or email directly.</div>
+
+      <form id="contactForm">
+        <!-- Replace YOUR_ACCESS_KEY_HERE with your key from web3forms.com -->
+        <input type="hidden" name="access_key" value="a2615a9a-967e-415a-91aa-b282f669cf29">
+        <input type="hidden" name="subject" value="New message from portfolio contact form">
+        <input type="hidden" name="from_name" value="Portfolio Contact Form">
+        <input type="checkbox" name="botcheck" style="display:none">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>First name *</label>
+            <input type="text" name="first_name" placeholder="Jane" required>
+          </div>
+          <div class="form-group">
+            <label>Last name *</label>
+            <input type="text" name="last_name" placeholder="Smith" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Email address *</label>
+          <input type="email" name="email" placeholder="jane@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label>Reason for reaching out</label>
+          <select name="reason">
+            <option value="">Select a reason...</option>
+            <option value="Job Opportunity">Job Opportunity</option>
+            <option value="Consulting / Freelance">Consulting / Freelance</option>
+            <option value="Security Research Collaboration">Security Research Collaboration</option>
+            <option value="Speaking / Workshop">Speaking / Workshop</option>
+            <option value="General Enquiry">General Enquiry</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Message *</label>
+          <textarea name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">Send Message →</button>
+        <p class="form-notice">Powered by <a href="https://web3forms.com" target="_blank">Web3Forms</a> — free & no spam.</p>
+      </form>
     </div>
+
   </div>
 </section>
 
-<footer>Built with plain HTML · Ready to host free on GitHub Pages · © 2026 Sumedh Patil</footer>
+<footer>Built with plain HTML · Hosted free on GitHub Pages · © 2026 Sumedh Patil</footer>
+
+<script>
+const form = document.getElementById('contactForm');
+const submitBtn = document.getElementById('submitBtn');
+const successMsg = document.getElementById('successMsg');
+const errorMsg = document.getElementById('errorMsg');
+
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+  successMsg.style.display = 'none';
+  errorMsg.style.display = 'none';
+
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: json
+    });
+    const data = await res.json();
+    if (data.success) {
+      successMsg.style.display = 'block';
+      form.reset();
+    } else {
+      errorMsg.style.display = 'block';
+    }
+  } catch(err) {
+    errorMsg.style.display = 'block';
+  }
+
+  submitBtn.disabled = false;
+  submitBtn.textContent = 'Send Message →';
+});
+</script>
 
 </body>
 </html>
