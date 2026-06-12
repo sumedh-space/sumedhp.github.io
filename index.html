@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101114">
 <title>Sumedh Patil — Product Security Engineer</title>
 <meta name="description" content="Sumedh Patil — Product Security Engineer at Conga. Cloud security, DevSecOps, threat intelligence.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,6 +22,7 @@
   --r:18px;
 }
 html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:70px}
 body{font-family:var(--sans);background:var(--bg);color:var(--text);font-size:16px;line-height:1.7}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
@@ -158,19 +160,61 @@ h2{font-size:clamp(28px,3vw,40px);font-weight:800;color:var(--white);letter-spac
 }
 @media(max-width:1100px){
   .shell{grid-template-columns:1fr}
-  .sidebar{position:relative;height:auto;border-right:none;border-bottom:1px solid var(--line);padding:90px 32px 48px}
+  .sidebar{position:relative;height:auto;border-right:none;border-bottom:1px solid var(--line);padding:108px 32px 48px}
   .topnav{position:fixed;left:0;right:0;justify-content:center}
   .show-grid,.cred-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:700px){
-  .block{padding:64px 22px}
-  .sidebar{padding:96px 22px 44px}
+  body{font-size:15px}
+  .block{padding:56px 18px}
+  .sidebar{padding:96px 18px 40px}
+  .side-title{font-size:27px}
+  .side-text{font-size:14.5px;margin-bottom:24px}
+  .side-cta{width:100%;justify-content:center;padding:16px}
+  .avatar{width:62px;height:62px}
+  .hey{font-size:14px}
+  .hey b{font-size:16px}
+  h2{font-size:25px}
+  .block-sub{font-size:14.5px;margin-bottom:32px}
+
+  /* top nav: horizontally scrollable pill bar with hidden scrollbar */
+  .topnav{justify-content:flex-start;gap:6px;padding:12px 14px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .topnav::-webkit-scrollbar{display:none}
+  .topnav a{flex-shrink:0;padding:9px 14px;border-radius:99px;background:var(--card);border:1px solid var(--line);font-size:13.5px}
+  .topnav a.active{color:var(--accent);border-color:rgba(201,241,88,.4)}
+  .say-hello{border:none!important}
+
   .show-grid,.cred-grid,.form-row{grid-template-columns:1fr}
-  .gallery{grid-template-columns:1fr 1fr}
-  .g-item:nth-child(2){transform:none}
-  .exp-item{grid-template-columns:1fr;gap:6px}
-  .topnav{gap:16px;padding:16px;overflow-x:auto}
-  .contact-card{padding:28px}
+  .show-body{padding:20px 20px 24px}
+  .show-title{font-size:17.5px}
+
+  .exp-item{grid-template-columns:1fr;gap:6px;padding:26px 0}
+  .exp-date{display:flex;align-items:center;gap:10px;padding-top:0}
+  .exp-date br{display:none}
+  .exp-date .now{margin-top:0}
+  .exp-role{font-size:18px}
+
+  .cred{padding:22px}
+  .faq summary{font-size:15.5px;padding:20px 2px}
+  .faq-body{font-size:14px}
+
+  /* gallery: portrait of user full width, illustrations side by side */
+  .gallery{grid-template-columns:1fr 1fr;gap:14px}
+  .g-item:nth-child(2){transform:none;grid-column:1/-1;aspect-ratio:4/4.2;order:-1}
+  .g-item{aspect-ratio:3/4}
+
+  .contact-meta{gap:18px}
+  .cm{flex:1 1 100%}
+  .contact-card{padding:22px;border-radius:18px}
+  /* 16px inputs prevent iOS auto-zoom on focus */
+  .fg input,.fg textarea,.fg select{font-size:16px;padding:14px 16px}
+  .submit-btn{padding:16px}
+  #toTop{bottom:18px;right:18px;width:44px;height:44px}
+}
+@media(max-width:380px){
+  .block{padding:48px 14px}
+  .sidebar{padding:92px 14px 36px}
+  .side-title{font-size:24px}
 }
 </style>
 </head>
